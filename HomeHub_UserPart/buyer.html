@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Buyer Portal | HomeHub</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div>
+
+<div class="brand">
+Home<span>Hub</span>
+</div>
+
+<p class="user-role">
+Buyer Portal
+</p>
+
+<ul class="nav-links">
+
+<li>
+<a href="#dashboard" class="active">
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="#browse-properties">
+Browse Properties
+</a>
+</li>
+
+<li>
+<a href="#purchase-requests">
+Purchase Requests
+</a>
+</li>
+
+<li>
+<a href="#interested-properties">
+Interested Properties
+</a>
+</li>
+
+<li>
+<a href="#buyer-profile">
+Profile
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="sidebar-bottom">
+
+<a href="seller.html">
+Seller Portal
+</a>
+
+<a href="index.html" class="logout">
+Logout
+</a>
+
+</div>
+
+</aside>
+
+
+<!-- Main Content -->
+
+<div class="main-wrapper">
+
+<header class="top-header">
+
+<div>
+
+<p>
+Buyer Workspace
+</p>
+
+<h2>
+Find Your Perfect Property
+</h2>
+
+</div>
+
+<a
+href="#browse-properties"
+class="btn btn-primary"
+>
+Browse Properties
+</a>
+
+</header>
+
+
+<main class="page-content">
+
+<!-- Dashboard Banner -->
+
+<section
+class="welcome-banner buyer-banner"
+id="dashboard"
+>
+
+<div>
+
+<p class="small-title light-title">
+HOMEHUB BUYER
+</p>
+
+<h1>
+Search and request your ideal property.
+</h1>
+
+<p>
+Browse approved apartments and buildings,
+view property details and submit purchase requests.
+</p>
+
+</div>
+
+<a
+href="#browse-properties"
+class="btn btn-white"
+>
+Start Browsing
+</a>
+
+</section>
+
+
+<!-- Dashboard Summary -->
+
+<section class="summary-grid">
+
+<div class="summary-card">
+
+<p>
+Available Properties
+</p>
+
+<h2>0</h2>
+
+<span>
+No property available
+</span>
+
+</div>
+
+
+<div class="summary-card">
+
+<p>
+Interested Properties
+</p>
+
+<h2>0</h2>
+
+<span>
+No saved property
+</span>
+
+</div>
+
+
+<div class="summary-card">
+
+<p>
+Purchase Requests
+</p>
+
+<h2>0</h2>
+
+<span>
+No submitted request
+</span>
+
+</div>
+
+
+<div class="summary-card">
+
+<p>
+Accepted Requests
+</p>
+
+<h2>0</h2>
+
+<span>
+No accepted request
+</span>
+
+</div>
+
+</section>
+
+
+<!-- Property Search -->
+
+<section
+class="card-panel"
+id="browse-properties"
+>
+
+<div class="panel-header">
+
+<div>
+
+<p class="small-title">
+PROPERTY SEARCH
+</p>
+
+<h2>
+Browse Available Properties
+</h2>
+
+</div>
+
+</div>
+
+
+<form
+class="search-form"
+action="#property-results"
+method="get"
+>
+
+<!-- Location -->
+
+<div class="form-group">
+
+<label for="search-location">
+Location
+</label>
+
+<input
+type="text"
+id="search-location"
+name="location"
+placeholder="Enter location"
+>
+
+</div>
+
+
+<!-- Property Type -->
+
+<div class="form-group">
+
+<label for="search-type">
+Property Type
+</label>
+
+<select
+id="search-type"
+name="property_type"
+>
+
+<option value="">
+All Property Types
+</option>
+
+<option value="Apartment">
+Apartment
+</option>
+
+<option value="Building">
+Building
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Minimum Price -->
+
+<div class="form-group">
+
+<label for="minimum-price">
+Minimum Price
+</label>
+
+<input
+type="text"
+id="minimum-price"
+name="minimum_price"
+inputmode="numeric"
+pattern="[0-9]+"
+placeholder="Enter minimum price"
+>
+
+</div>
+
+
+<!-- Maximum Price -->
+
+<div class="form-group">
+
+<label for="maximum-price">
+Maximum Price
+</label>
+
+<input
+type="text"
+id="maximum-price"
+name="maximum_price"
+inputmode="numeric"
+pattern="[0-9]+"
+placeholder="Enter maximum price"
+>
+
+</div>
+
+
+<!-- Bedrooms -->
+
+<div class="form-group">
+
+<label for="search-bedrooms">
+Bedrooms
+</label>
+
+<select
+id="search-bedrooms"
+name="bedrooms"
+>
+
+<option value="">
+Any Bedrooms
+</option>
+
+<option value="1">
+1 Bedroom
+</option>
+
+<option value="2">
+2 Bedrooms
+</option>
+
+<option value="3">
+3 Bedrooms
+</option>
+
+<option value="4">
+4 or More
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group search-button-area">
+
+<button
+type="submit"
+class="btn btn-primary"
+>
+Search Property
+</button>
+
+</div>
+
+</form>
+
+</section>
+
+
+<!-- Property Results -->
+
+<section
+class="card-panel"
+id="property-results"
+>
+
+<div class="panel-header">
+
+<div>
+
+<p class="small-title">
+SEARCH RESULTS
+</p>
+
+<h2>
+Available Properties
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="empty-message large-empty">
+
+<div class="empty-icon">
+🏢
+</div>
+
+<h3>
+No properties available yet
+</h3>
+
+<p>
+Approved seller properties will appear here
+after JavaScript or PHP is connected.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- Purchase Requests -->
+
+<section
+class="card-panel"
+id="purchase-requests"
+>
+
+<div class="panel-header">
+
+<div>
+
+<p class="small-title">
+REQUEST HISTORY
+</p>
+
+<h2>
+My Purchase Requests
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="table-responsive">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Property</th>
+<th>Seller</th>
+<th>Property Price</th>
+<th>Offered Price</th>
+<th>Status</th>
+</tr>
+
+</thead>
+
+
+<tbody>
+
+<tr>
+
+<td colspan="5">
+
+<div class="empty-message">
+
+<h3>
+No purchase requests yet
+</h3>
+
+<p>
+Submitted purchase requests
+will appear here later.
+</p>
+
+</div>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- Interested Properties -->
+
+<section
+class="card-panel"
+id="interested-properties"
+>
+
+<div class="panel-header">
+
+<div>
+
+<p class="small-title">
+SAVED PROPERTIES
+</p>
+
+<h2>
+Interested Properties
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="empty-message large-empty">
+
+<div class="empty-icon">
+♡
+</div>
+
+<h3>
+No interested properties yet
+</h3>
+
+<p>
+Properties saved by the buyer will appear here.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- Buyer Profile -->
+
+<section class="card-panel" id="buyer-profile">
+
+<div class="panel-header">
+
+<div>
+
+<p class="small-title">
+ACCOUNT SETTINGS
+</p>
+
+<h2>
+Buyer Profile
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="profile-note">
+
+<p>
+Your registration information will appear here
+after the input values are connected using
+JavaScript or PHP.
+</p>
+
+</div>
+
+
+<form
+class="form-grid"
+action="#buyer-profile"
+method="post"
+>
+
+<div class="form-group">
+
+<label for="buyer-name">
+Full Name
+</label>
+
+<input
+type="text"
+id="buyer-name"
+name="buyer_name"
+placeholder="Your name will appear here"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="buyer-age">
+Age
+</label>
+
+<input
+type="text"
+id="buyer-age"
+name="buyer_age"
+inputmode="numeric"
+pattern="[0-9]+"
+placeholder="Your age will appear here"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="buyer-email">
+Gmail Address
+</label>
+
+<input
+type="email"
+id="buyer-email"
+name="buyer_email"
+placeholder="Your Gmail will appear here"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="buyer-gender">
+Gender
+</label>
+
+<input
+type="text"
+id="buyer-gender"
+name="buyer_gender"
+placeholder="Your gender will appear here"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="buyer-phone">
+Phone Number
+</label>
+
+<input
+type="tel"
+id="buyer-phone"
+name="buyer_phone"
+placeholder="Enter phone number"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="buyer-password">
+Password
+</label>
+
+<input
+type="password"
+id="buyer-password"
+name="buyer_password"
+placeholder="Enter password"
+>
+
+</div>
+
+
+<div class="form-group full-width">
+
+<label for="buyer-address">
+Address
+</label>
+
+<textarea
+id="buyer-address"
+name="buyer_address"
+rows="4"
+placeholder="Enter your address"
+></textarea>
+
+</div>
+
+
+<div class="form-group full-width button-group">
+
+<button
+type="submit"
+class="btn btn-primary"
+>
+Save Profile
+</button>
+
+</div>
+
+</form>
+
+</section>
+
+</main>
+
+</div>
+
+</div>
+
+</body>
+</html>
